@@ -80,7 +80,7 @@ public class VistaDetalleCancion extends AppCompatActivity {
             public void onClick(View v) {
                 mediaPlayer.start();
                 animacionDesaparecer(botonPlay);
-                portada.animate().scaleY((float) 1.55).scaleX((float) 1.55).setDuration(900);
+                portada.animate().scaleY((float) 1.50).scaleX((float) 1.50).setDuration(900);
             }
         });
     }
