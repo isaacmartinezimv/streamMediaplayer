@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".VistaDetalleCancion">
+
+    <TextView
+        android:id="@+id/detalleNombreCancionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textSize="22dp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:text="Nombre Cancion"/>
+
+    <TextView
+        android:id="@+id/detalleArtistaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/highlightColor"
+        android:text="Nombre artista"/>
+
+    <ImageView
+        android:id="@+id/detallePortadaId"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="85dp"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageButton
+        android:id="@+id/detalleBotonPlayId"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:tint="@android:color/white"
+        android:src="@drawable/ic_play_circle_filled_black_24dp"/>
+</LinearLayout>

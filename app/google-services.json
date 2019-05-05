@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "77990707660",
+    "firebase_url": "https://streammediaplayer-350b7.firebaseio.com",
+    "project_id": "streammediaplayer-350b7",
+    "storage_bucket": "streammediaplayer-350b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77990707660:android:373ebacd4ae7bdee",
+        "android_client_info": {
+          "package_name": "isaacmartinez.damm8.com.streammediaplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77990707660-q422nb65unhtr9kh76pouflns2uccuhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPAfsLpR5JEreKCXrdUW33WULaanEi-jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77990707660-q422nb65unhtr9kh76pouflns2uccuhc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
