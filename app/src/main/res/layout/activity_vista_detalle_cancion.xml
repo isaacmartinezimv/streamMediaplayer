@@ -29,13 +29,23 @@
         android:textColor="@color/highlightColor"
         android:text="Nombre artista"/>
 
-    <ImageView
-        android:id="@+id/detallePortadaId"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="85dp"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.CardView
+        android:id="@+id/fullPortadaId"
+        android:layout_width="222dp"
         android:layout_height="222dp"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_marginTop="85dp"
+        android:elevation="25dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/detallePortadaId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+    </android.support.v7.widget.CardView>
 
     <ImageButton
         android:id="@+id/detalleBotonPlayId"

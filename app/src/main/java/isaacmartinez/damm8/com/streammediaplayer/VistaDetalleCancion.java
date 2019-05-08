@@ -1,11 +1,13 @@
 package isaacmartinez.damm8.com.streammediaplayer;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageButton;
@@ -22,6 +24,7 @@ public class VistaDetalleCancion extends AppCompatActivity {
     ImageView portada;
     ImageButton botonPlay;
     MediaPlayer mediaPlayer;
+    CardView cardPortada;
 
     FirebaseStorage firebaseStorage;
     Bitmap portadaGrande;
@@ -30,6 +33,8 @@ public class VistaDetalleCancion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista_detalle_cancion);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         obtenerDatos();
     }
 
@@ -54,6 +59,7 @@ public class VistaDetalleCancion extends AppCompatActivity {
 
         botonPlay = findViewById(R.id.detalleBotonPlayId);
         portada = findViewById(R.id.detallePortadaId);
+        cardPortada = findViewById(R.id.fullPortadaId);
 
         firebaseStorage = FirebaseStorage.getInstance();
         firebaseStorage.getReferenceFromUrl(urlPortada).getBytes(1024*1024).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -70,7 +76,7 @@ public class VistaDetalleCancion extends AppCompatActivity {
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
                     animacionAparecer(botonPlay);
-                    portada.animate().scaleY((float) 1.0).scaleX((float) 1.0).setDuration(900);
+                    cardPortada.animate().scaleY((float) 1.0).scaleX((float) 1.0).setDuration(900);
                 }
             }
         });
@@ -80,7 +86,7 @@ public class VistaDetalleCancion extends AppCompatActivity {
             public void onClick(View v) {
                 mediaPlayer.start();
                 animacionDesaparecer(botonPlay);
-                portada.animate().scaleY((float) 1.50).scaleX((float) 1.50).setDuration(900);
+                cardPortada.animate().scaleY((float) 1.50).scaleX((float) 1.50).setDuration(900);
             }
         });
     }
